@@ -1,4 +1,4 @@
-# Agentic and Fractal Reasoning for Article-Level Automated Fact-Checking
+# Agentic and Fractal Reasoning for Automated Fact-Checking
 
 **Welcome to the website repository for our 2026 DSC 180 Capstone Project.** [**Click here to view our project website!**](https://whiteblank0.github.io/DSC180-Capstone-Website/)
 
