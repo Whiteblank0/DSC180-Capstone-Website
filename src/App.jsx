@@ -85,15 +85,15 @@ export default function App() {
               <span>Try the Interactive App</span>
             </a>
             <button onClick={() => scrollTo('introduction')} className="flex items-center justify-center space-x-2 w-full sm:w-auto px-8 py-4 bg-white text-slate-700 font-bold rounded-full border border-slate-200 hover:bg-slate-50 transition-all">
-              <span>Read the Research</span>
+              <span>Read the Research Report</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-slate-500 font-medium text-sm">
-            <p>Team: <span className="text-slate-800 font-bold">Cecilia Lin, Yulin Chen, Yaoxi Li</span></p>
+            <p>Team Members: <span className="text-slate-800 font-bold">Cecilia Lin, Yulin Chen, Yaoxi Li</span></p>
             <p className="hidden sm:block">•</p>
-            <p>Advisors: <span className="text-slate-800 font-bold">Dr. Ali Arsanjani, Samuel Lau</span></p>
+            <p>Mentors: <span className="text-slate-800 font-bold">Ali Arsanjani, Samuel Lau</span></p>
           </div>
         </div>
       </section>
@@ -105,7 +105,7 @@ export default function App() {
             <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
               <FileText className="w-6 h-6" />
             </div>
-            <h2 className="text-3xl font-bold">The Modern Information Challenge</h2>
+            <h2 className="text-3xl font-bold">Introduction: What's this all about?</h2>
           </div>
           <div className="prose prose-lg text-slate-600 max-w-none">
             <p>
@@ -171,9 +171,9 @@ export default function App() {
               Providing the statistical grounding. We engineered specific models for the semantic factuality factors using the LIAR-PLUS dataset.
             </p>
             <ul className="space-y-3 text-sm text-slate-300">
-              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-blue-400 flex-shrink-0"/> <strong>LinearSVC:</strong> Utilized for Sensationalism and News Coverage.</li>
+              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-blue-400 flex-shrink-0"/> <strong className="mr-1">LinearSVC:</strong> Utilized for Sensationalism and News Coverage.</li>
               <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-blue-400 flex-shrink-0"/> <strong>Cosine Similarity:</strong> Prototype-based approach for Intent classification.</li>
-              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-blue-400 flex-shrink-0"/> <strong>DistilRoBERTa:</strong> Fine-tuned for Stance classification.</li>
+              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-blue-400 flex-shrink-0"/> <strong className="mr-1">DistilRoBERTa:</strong> Fine-tuned for Stance classification.</li>
             </ul>
           </div>
 
@@ -187,9 +187,9 @@ export default function App() {
               Built on the <strong>Google Agent Development Kit (ADK)</strong> and powered by the high-speed reasoning of <strong>Gemini 3 Flash</strong>. The system employs a <code>SequentialAgent</code> that orchestrates a parallel squad of factor specialists.
             </p>
             <ul className="space-y-3 text-sm text-blue-100">
-              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-white flex-shrink-0"/> <strong>Factor Squad:</strong> A <code>ParallelAgent</code> managing 6 specialized analysts.</li>
+              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-white flex-shrink-0"/> <strong className="mr-1">Factor Squad:</strong> A <code className="mx-1">ParallelAgent</code> managing 6 specialized analysts.</li>
               <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-white flex-shrink-0"/> <strong>Final Synthesizer:</strong> Resolves contradictions and performs retrospective re-grounding.</li>
-              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-white flex-shrink-0"/> <strong>External Verification:</strong> Context Veracity and Title-Body Alignment integrate Google Search APIs for real-time grounding.</li>
+              <li className="flex items-center"><ChevronRight className="w-4 h-4 mr-2 text-white flex-shrink-0"/> <strong className="mr-1">External Verification:</strong> Context Veracity and Title-Body Alignment integrate Google Search APIs for real-time grounding.</li>
             </ul>
           </div>
         </div>
@@ -303,8 +303,51 @@ export default function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Performance & Evaluation</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Our evaluation demonstrates that while individual predictive classifiers show varied performance on semantic tasks, the grounded FCoT generative framework successfully synthesizes these signals into robust, verifiable credibility profiles.
+              Our evaluation demonstrates that while individual predictive classifiers show varied performance on semantic tasks, the grounded CoT and FCoT generative framework successfully synthesize these signals into robust, verifiable credibility profiles.
             </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 mb-8">
+            {/* Predictive Results */}
+            <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+              <div className="p-6 border-b border-slate-100 bg-slate-50">
+                <h3 className="font-bold text-lg">Individual Predictive Model Performance</h3>
+                <p className="text-xs text-slate-500 mt-1">Evaluated on the LIAR-PLUS test set prior to generative integration.</p>
+              </div>
+              <div className="p-6">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="text-sm text-slate-500 border-b border-slate-200">
+                      <th className="pb-3 font-medium">Factor</th>
+                      <th className="pb-3 font-medium text-right">Accuracy</th>
+                      <th className="pb-3 font-medium text-right">Macro F1</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-sm">
+                    <tr className="border-b border-slate-100">
+                      <td className="py-3 text-slate-700">News Coverage</td>
+                      <td className="py-3 text-right font-mono">0.33</td>
+                      <td className="py-3 text-right font-mono">0.17</td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-3 text-slate-700">Intent</td>
+                      <td className="py-3 text-right font-mono">0.35</td>
+                      <td className="py-3 text-right font-mono">0.17</td>
+                    </tr>
+                    <tr className="border-b border-slate-100">
+                      <td className="py-3 text-slate-700 font-medium">Sensationalism</td>
+                      <td className="py-3 text-right font-mono">0.62</td>
+                      <td className="py-3 text-right font-mono">0.61</td>
+                    </tr>
+                    <tr>
+                      <td className="pt-3 text-slate-700">Stance</td>
+                      <td className="pt-3 text-right font-mono">0.40</td>
+                      <td className="pt-3 text-right font-mono">0.39</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
 
           <div className="mb-12">
@@ -336,7 +379,7 @@ export default function App() {
                       <td className="p-3 text-center font-mono">0.60</td>
                       <td className="p-3 text-center font-mono">0.65</td>
                       <td className="p-3 text-center font-mono">0.80</td>
-                      <td className="p-3 text-center font-mono text-red-500">0.35</td>
+                      <td className="p-3 text-center font-mono">0.35</td>
                       <td className="p-3 text-center font-mono font-bold bg-slate-50 border-l border-slate-200">0.63</td>
                     </tr>
                     <tr>
@@ -431,7 +474,7 @@ export default function App() {
                 <summary className="flex items-center justify-between p-6 cursor-pointer font-bold text-indigo-900">
                   <div className="flex items-center">
                     <span className="w-6 h-6 rounded-full bg-indigo-200 flex items-center justify-center text-xs mr-3 border border-indigo-300">2</span>
-                    Our Innovation: Fractal CoT (FCoT)
+                    Fractal CoT (FCoT)
                   </div>
                   <ChevronDown className="w-5 h-5 text-indigo-400 group-open:rotate-180 transition-transform" />
                 </summary>
@@ -474,7 +517,6 @@ export default function App() {
                 <ExternalLink className="w-4 h-4" />
              </a>
           </div>
-
         </div>
       </section>
 
@@ -535,7 +577,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-6">
           <ShieldAlert className="w-8 h-8 mx-auto text-blue-500 mb-6" />
           <p className="mb-2">© 2026 Cecilia Lin, Yulin Chen, Yaoxi Li. GenAI For Good Capstone Project.</p>
-          <p className="text-sm">University of California, San Diego • Mentors: Dr. Ali Arsanjani, Samuel Lau</p>
+          <p className="text-sm">University of California, San Diego • Mentors: Ali Arsanjani, Samuel Lau</p>
           <div className="mt-8 flex justify-center space-x-6">
             <a href="https://github.com/YulinChen12/DSC180A-GroupNull" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
             <a href="#" className="hover:text-white transition-colors">Project Report</a>
