@@ -705,7 +705,7 @@ export default function App() {
           <p className="text-sm">University of California, San Diego • Mentors: Ali Arsanjani, Samuel Lau</p>
           <div className="mt-8 flex flex-wrap justify-center gap-6">
             <a href="https://github.com/YulinChen12/Agentic-and-Fractal-Reasoning-for-Automated-Fact-Checking" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub Repository</a>
-            <a href="https://drive.google.com/file/d/1DFjgYsAz2nucR-u6_8g2etNzYVBW1thY/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Project Report</a>
+            <a href="https://drive.google.com/file/d/1qUTmeblOpo7QNRbXUlYY5f_1_sDzye2A/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Project Report</a>
             <a href="https://drive.google.com/file/d/1D0U48H13eCO68nTvLkAE5gMhsSmuVOW3/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Poster</a>
             <a href="https://drive.google.com/file/d/1v_3_r1s50QLXRXbmNhpUODadefhmKN3S/view?usp=drive_link" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Demo Video</a>
           </div>
