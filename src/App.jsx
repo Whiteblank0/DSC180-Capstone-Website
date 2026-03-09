@@ -112,7 +112,6 @@ export default function App() {
             <h2 className="text-3xl font-bold">Introduction: What's this all about?</h2>
           </div>
           <div className="prose prose-lg text-slate-600 max-w-none">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 mb-3">Problem Statement & Target Stakeholders</h3>
             <p>
             The exponential growth of online misinformation has overwhelmed the capacity of human fact-checkers, creating an urgent need for automated verification systems that can operate at internet scale. However, current AI approaches face a fundamental trade-off. On one hand, traditional <strong>predictive models</strong> offer statistical stability but lack context, struggling to understand the nuance of long-form journalism. On the other hand, modern <strong>generative models (like Gemini)</strong> provide flexible reasoning but are prone to hallucination—often making up facts or uncritically agreeing with whatever information they are fed.
             </p>           
