@@ -15,4 +15,4 @@ Our solution is a novel, hybrid framework that synthesizes both worlds. By orche
 **University of California, San Diego - Data Science Capstone 2026**
 
 * **Team Members:** Cecilia Lin, Yulin Chen, Yaoxi Li
-* **Mentors:** Dr. Ali Arsanjani, Samuel Lau
+* **Mentors:** Ali Arsanjani, Samuel Lau
